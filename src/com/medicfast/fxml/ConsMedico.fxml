@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="650.0" minWidth="1366.0" prefHeight="650.0" prefWidth="1200.0" stylesheets="@../css/Botao.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.medicfast.controller.ConsMedicoController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="table" editable="true" layoutY="118.0" prefHeight="391.0" prefWidth="1230.0" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="118.0">
+              <columns>
+                <TableColumn fx:id="colID" prefWidth="70.0" text="Id" />
+                <TableColumn fx:id="colNome" prefWidth="311.0" text="Nome" />
+                  <TableColumn fx:id="colEndereco" prefWidth="195.0" text="Endereço" />
+                  <TableColumn fx:id="colTelefone" prefWidth="170.0" text="Telefone" />
+                  <TableColumn fx:id="colEmail" prefWidth="131.0" text="Email" />
+                  <TableColumn fx:id="colEspecialidade" prefWidth="202.0" text="Especialidades" />
+                  <TableColumn fx:id="colAtendendo" prefWidth="178.0" text="Atendendo Como ?" />
+              </columns>
+            </TableView>
+            <TextField fx:id="txtNome" layoutX="52.0" layoutY="72.0" prefHeight="25.0" prefWidth="964.0" promptText="Digite o nome ..." AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="334.0">
+               <opaqueInsets>
+                  <Insets right="20.0" />
+               </opaqueInsets></TextField>
+            <ComboBox fx:id="slcConsulta" layoutX="146.0" layoutY="23.0" onAction="#acao" prefHeight="25.0" prefWidth="250.0" />
+            <Label fx:id="lblConsultarPor" layoutX="52.0" layoutY="27.0" text="Consultar Por:" />
+            <Button fx:id="btnPesquisar" layoutX="1048.0" layoutY="72.0" mnemonicParsing="false" onAction="#pesquisar" text="Pesquisar" />
+            <ComboBox fx:id="slcPonto" layoutX="196.0" layoutY="72.0" minWidth="200.0" prefHeight="25.0" prefWidth="250.0" />
+            <Label fx:id="lbPonto" layoutX="51.0" layoutY="76.0" text="Ponto de Atendimento :" />
+            <ComboBox fx:id="slcEspecialidade" layoutX="146.0" layoutY="72.0" minWidth="200.0" prefHeight="25.0" prefWidth="250.0" />
+            <Label fx:id="lbEspecialidade" layoutX="51.0" layoutY="76.0" text="Especialidade :" />
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <FlowPane prefHeight="87.0" prefWidth="1350.0" BorderPane.alignment="CENTER_RIGHT">
+         <children>
+            <Button fx:id="btnPlantao" mnemonicParsing="false" onAction="#inserirNoPlantao" text="Inseri Medico Selecionado no Plantão">
+               <FlowPane.margin>
+                  <Insets left="875.0" />
+               </FlowPane.margin>
+            </Button>
+            <Button fx:id="btnRemoverPlantao" layoutX="1095.0" layoutY="10.0" mnemonicParsing="false" onAction="#removerDoPlantao" text="Retirar Medico Selecionado do Plantão">
+               <FlowPane.margin>
+                  <Insets left="50.0" />
+               </FlowPane.margin>
+            </Button>
+            <Button fx:id="btnNovo" mnemonicParsing="false" onAction="#novo" text="Novo">
+               <FlowPane.margin>
+                  <Insets left="1100.0" top="10.0" />
+               </FlowPane.margin>
+            </Button>
+            <Button fx:id="btnEditar" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#editar" text="Editar">
+               <FlowPane.margin>
+                  <Insets left="20.0" top="10.0" />
+               </FlowPane.margin></Button>
+            <Button fx:id="btnExcluir" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#excluir" text="Excluir">
+               <FlowPane.margin>
+                  <Insets left="20.0" top="10.0" />
+               </FlowPane.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </FlowPane>
+   </bottom>
+   <top>
+      <FlowPane alignment="CENTER" prefHeight="87.0" prefWidth="1366.0" style="-fx-background-color: #4169e1;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Consulta de Médico" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </FlowPane>
+   </top>
+</BorderPane>

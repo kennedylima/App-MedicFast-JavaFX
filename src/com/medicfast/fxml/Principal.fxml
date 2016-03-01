@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="700.0" minWidth="1366.0" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/Principal.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.medicfast.controller.TelaPrincipalController">
+   <center>
+      <AnchorPane fx:id="centro" prefHeight="602.0" prefWidth="1360.0" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+      <VBox prefHeight="59.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar minWidth="1366.0">
+              <menus>
+                <Menu fx:id="menuNovo" mnemonicParsing="false" text="Novo">
+                  <items>
+                        <MenuItem fx:id="novoEspecialidade" mnemonicParsing="false" text="Especialidade" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                    <MenuItem fx:id="novoMedicamento" mnemonicParsing="false" text="Medicamento" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="novoMedico" mnemonicParsing="false" text="Médico" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="novoPonto" mnemonicParsing="false" text="Ponto de Atendimento" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="novoUsuario" mnemonicParsing="false" text="Usuário" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="novoOcorrencia" mnemonicParsing="false" text="Tipo de Ocorrência" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Consultar">
+                  <items>
+                        <MenuItem fx:id="conEspecialidade" mnemonicParsing="false" text="Especialidade" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="conMedicamento" mnemonicParsing="false" text="Medicamento" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="conMedico" mnemonicParsing="false" text="Médico" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="conPonto" mnemonicParsing="false" text="Ponto de Atendimento" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="conUsuario" mnemonicParsing="false" text="Usuário" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="conOcorrencia" mnemonicParsing="false" text="Tipo de Ocorrência" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Sair">
+                     <items>
+                        <MenuItem fx:id="btnSair" mnemonicParsing="false" onAction="#sair" text="Logout" />
+                     </items></Menu>
+              </menus>
+            </MenuBar>
+            <ToolBar maxHeight="80.0" maxWidth="1360.0" minWidth="1366.0" prefHeight="215.0" prefWidth="1360.0" style="-fx-background-color: #dcdcdc; -fx-border-color: #000000;">
+              <items>
+                <Button fx:id="senha" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" minHeight="70.0" minWidth="115.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="93.0" text="Chamar Senha">
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/senha.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font></Button>
+                  <Button fx:id="medico" alignment="CENTER" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" minHeight="70.0" minWidth="115.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="93.0" text="Médico" textAlignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/medico.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="medicamento" alignment="CENTER" contentDisplay="TOP" layoutX="107.0" layoutY="10.0" minHeight="70.0" minWidth="115.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="93.0" text="Medicamento" textAlignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/remedio.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+              </items>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="2.0" left="15.0" right="10.0" top="2.0" />
+               </padding>
+            </ToolBar>
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

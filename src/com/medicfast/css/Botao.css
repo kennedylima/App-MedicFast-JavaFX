@@ -1,0 +1,42 @@
+.button {
+    -fx-text-fill: white;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-weight: bold;
+    -fx-background-color: #4169e1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+
+.text-field{
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+}
+
+.text-area{
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+}
+
+.grid-pane{
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+}
+
+.combo-box{
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.4) , 5, 0.0 , 0 , 1 );
+}
+
+.label,#n,#b,#c{
+    -fx-font-size: 14px;
+    -fx-font-family: "Tahoma";
+    -fx-fill: #000000;
+}
+
+.text{
+    -fx-fill: #000000;
+}
+
+#labelNumSenha{
+    -fx-font-size: 72px;
+}
+
+#info{
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}

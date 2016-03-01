@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="650.0" minWidth="1366.0" prefHeight="650.0" prefWidth="1200.0" stylesheets="@../css/Botao.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.medicfast.controller.ConsEspecialidadeController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="table" editable="true" layoutX="176.0" layoutY="118.0" prefHeight="391.0" prefWidth="844.0" AnchorPane.bottomAnchor="18.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="118.0">
+              <columns>
+                <TableColumn fx:id="colID" prefWidth="92.0" text="Id" />
+                <TableColumn fx:id="colNome" prefWidth="873.0" text="Nome" />
+              </columns>
+            </TableView>
+            <TextField fx:id="txtNome" layoutX="52.0" layoutY="72.0" prefHeight="25.0" prefWidth="845.0" promptText="Digite o nome da especialidade..." AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="275.0" />
+            <Button fx:id="btnPesquisar" layoutX="1048.0" layoutY="72.0" mnemonicParsing="false" onAction="#pesquisar" text="Pesquisar" AnchorPane.rightAnchor="200.0" />
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <FlowPane prefHeight="87.0" prefWidth="1200.0" BorderPane.alignment="CENTER_RIGHT">
+         <children>
+            <Button fx:id="btnNovo" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#novo" text="Novo">
+               <FlowPane.margin>
+                  <Insets left="1100.0" top="30.0" />
+               </FlowPane.margin></Button>
+            <Button fx:id="btnEditar" mnemonicParsing="false" onAction="#editar" text="Editar">
+               <FlowPane.margin>
+                  <Insets left="10.0" top="30.0" />
+               </FlowPane.margin>
+            </Button>
+            <Button fx:id="btnExcluir" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#excluir" text="Excluir">
+               <FlowPane.margin>
+                  <Insets left="10.0" top="30.0" />
+               </FlowPane.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets top="30.0" />
+         </BorderPane.margin>
+      </FlowPane>
+   </bottom>
+   <top>
+      <FlowPane alignment="CENTER" prefHeight="87.0" prefWidth="1250.0" style="-fx-background-color: #4169e1;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Consulta de Especialidade Médica" textAlignment="JUSTIFY">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </FlowPane>
+   </top>
+</BorderPane>

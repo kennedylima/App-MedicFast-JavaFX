@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="1366.0" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/Botao.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.medicfast.controller.CadMedicamentoController">
+   <children>
+      <GridPane layoutX="322.0" layoutY="106.0" prefHeight="257.0" prefWidth="500.0" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="150.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="400.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="120.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Nome :" />
+            <Label text="Observações:" GridPane.rowIndex="3" />
+            <Label text="Sintomas :" GridPane.rowIndex="2" />
+            <Label text="Fabricante :" GridPane.rowIndex="1" />
+            <TextField fx:id="txtNome" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtFabricante" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtSintomas" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextArea fx:id="txtObs" prefHeight="143.0" prefWidth="395.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </TextArea>
+         </children>
+      </GridPane>
+      <TextField fx:id="txtQtd" layoutX="601.0" layoutY="334.0" prefHeight="25.0" prefWidth="65.0" AnchorPane.topAnchor="416.0" />
+      <Label layoutX="524.0" layoutY="338.0" text="Quantidade:" AnchorPane.leftAnchor="524.0" AnchorPane.topAnchor="420.0" />
+      <TextField fx:id="txtPeso" layoutX="426.0" layoutY="334.0" prefHeight="25.0" prefWidth="71.0" AnchorPane.leftAnchor="304.0" AnchorPane.topAnchor="416.0" />
+      <Label layoutX="380.0" layoutY="338.0" prefHeight="18.0" prefWidth="46.0" text="Peso:" AnchorPane.leftAnchor="264.0" AnchorPane.topAnchor="420.0" />
+      <FlowPane alignment="CENTER" layoutX="244.0" layoutY="-4.0" minWidth="1366.0" prefHeight="87.0" prefWidth="1360.0" style="-fx-background-color: #4169e1;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro de Medicamento">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </FlowPane>
+      <FlowPane alignment="BOTTOM_RIGHT" layoutY="453.0" minHeight="87.0" minWidth="1300.0" prefHeight="32.0" prefWidth="1350.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="480.0">
+         <children>
+            <Button fx:id="btnLimpar" mnemonicParsing="false" onAction="#limpar" text="Limpar">
+               <FlowPane.margin>
+                  <Insets right="10.0" />
+               </FlowPane.margin>
+            </Button>
+            <Button fx:id="btnConsultar" mnemonicParsing="false" onAction="#consultar" text="Consultar">
+               <FlowPane.margin>
+                  <Insets right="10.0" />
+               </FlowPane.margin>
+            </Button>
+            <Button fx:id="btnSalvar" mnemonicParsing="false" onAction="#salvar" text="Salvar">
+               <FlowPane.margin>
+                  <Insets right="50.0" />
+               </FlowPane.margin>
+            </Button>
+         </children>
+      </FlowPane>
+   </children>
+</AnchorPane>

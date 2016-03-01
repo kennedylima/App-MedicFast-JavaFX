@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="1366.0" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/Botao.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.medicfast.controller.CadPontoAtendimentoController">
+   <top>
+      <FlowPane alignment="CENTER" prefHeight="87.0" prefWidth="1300.0" style="-fx-background-color: #4169e1;" BorderPane.alignment="CENTER_RIGHT">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Ponto de Atendimento">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </FlowPane>
+   </top>
+   <bottom>
+      <FlowPane alignment="CENTER_RIGHT" prefHeight="38.0" prefWidth="1300.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnLimpar" mnemonicParsing="false" onAction="#limpar" text="Limpar">
+               <FlowPane.margin>
+                  <Insets right="20.0" />
+               </FlowPane.margin>
+            </Button>
+            <Button fx:id="btnConsultar" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#consultar" text="Consultar">
+               <FlowPane.margin>
+                  <Insets right="20.0" />
+               </FlowPane.margin>
+            </Button>
+            <Button fx:id="btnSalvar" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#Salvar" text="Salvar">
+               <FlowPane.margin>
+                  <Insets right="50.0" />
+               </FlowPane.margin>
+            </Button>
+         </children>
+      </FlowPane>
+   </bottom>
+   <left>
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="240.0" prefWidth="501.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="400.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Nome:" />
+            <Label text="Rua:" GridPane.rowIndex="1" />
+            <Label text="Telefone:" GridPane.rowIndex="4" />
+            <Text fx:id="n" strokeType="OUTSIDE" strokeWidth="0.0" text="Número:" GridPane.rowIndex="2" />
+            <Text fx:id="b" strokeType="OUTSIDE" strokeWidth="0.0" text="Bairro :" GridPane.rowIndex="3" />
+            <Text fx:id="c" strokeType="OUTSIDE" strokeWidth="0.0" text="Complemento:" GridPane.rowIndex="5" />
+            <TextField fx:id="txtNome" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtRua" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtNumero" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtBairro" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtTelefone" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtComplemento" GridPane.columnIndex="1" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+         <BorderPane.margin>
+            <Insets top="-30.0" />
+         </BorderPane.margin>
+      </GridPane>
+   </left>
+   <center>
+      <BorderPane maxHeight="482.0" maxWidth="800.0" minHeight="300.0" minWidth="800.0" prefHeight="452.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <left>
+            <TableView fx:id="tblMedico" editable="true" maxHeight="300.0" maxWidth="350.0" minHeight="300.0" minWidth="350.0" prefHeight="325.0" prefWidth="450.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="colIdMedico" prefWidth="24.0" text="Id" />
+                <TableColumn fx:id="colNomeMedico" prefWidth="204.0" text="Nome" />
+                  <TableColumn fx:id="colEspecialidade" prefWidth="121.0" text="Especialidade" />
+              </columns>
+               <BorderPane.margin>
+                  <Insets left="20.0" />
+               </BorderPane.margin>
+            </TableView>
+         </left>
+         <right>
+            <TableView fx:id="tblMedicamento" editable="true" maxHeight="300.0" maxWidth="350.0" minHeight="300.0" minWidth="350.0" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="colIdMedicamento" prefWidth="28.0" text="Id" />
+                <TableColumn fx:id="colNomeMedicamento" prefWidth="219.0" text="Nome" />
+                  <TableColumn fx:id="colQuantidade" prefWidth="102.0" text="Quantidade" />
+              </columns>
+               <BorderPane.margin>
+                  <Insets right="50.0" />
+               </BorderPane.margin>
+            </TableView>
+         </right>
+         <top>
+            <FlowPane prefHeight="149.0" prefWidth="800.0" BorderPane.alignment="BOTTOM_CENTER">
+               <children>
+                  <Label text="Médico :">
+                     <FlowPane.margin>
+                        <Insets left="25.0" top="120.0" />
+                     </FlowPane.margin>
+                  </Label>
+                  <ComboBox fx:id="slcMedico" prefHeight="25.0" prefWidth="200.0">
+                     <FlowPane.margin>
+                        <Insets left="15.0" top="120.0" />
+                     </FlowPane.margin>
+                  </ComboBox>
+                  <Button fx:id="btnAdicionarMedico" mnemonicParsing="false" onAction="#AdicionarMedico" text="Adicionar">
+                     <FlowPane.margin>
+                        <Insets left="19.0" top="120.0" />
+                     </FlowPane.margin>
+                  </Button>
+                  <Label text="Medicamento :">
+                     <FlowPane.margin>
+                        <Insets left="29.0" top="120.0" />
+                     </FlowPane.margin>
+                  </Label>
+                  <ComboBox fx:id="slcMedicamento" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="198.0">
+                     <FlowPane.margin>
+                        <Insets left="1.0" top="120.0" />
+                     </FlowPane.margin>
+                  </ComboBox>
+                  <Button fx:id="btnAdicionarMedicamento" layoutX="296.0" layoutY="70.0" mnemonicParsing="false" onAction="#AdicionarMedicamento" text="Adicionar">
+                     <FlowPane.margin>
+                        <Insets left="14.0" top="120.0" />
+                     </FlowPane.margin>
+                  </Button>
+               </children>
+               <BorderPane.margin>
+                  <Insets top="-21.0" />
+               </BorderPane.margin>
+            </FlowPane>
+         </top>
+         <bottom>
+            <FlowPane prefHeight="23.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnExcluirMedico" mnemonicParsing="false" onAction="#excluirMedico" text="Excluir Médico Selecionado">
+                     <FlowPane.margin>
+                        <Insets left="223.0" />
+                     </FlowPane.margin>
+                  </Button>
+                  <Button fx:id="btnExcluirMedicamento" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#excluirMedicamento" text="Excluir Medicamento Selecionado">
+                     <FlowPane.margin>
+                        <Insets left="205.0" />
+                     </FlowPane.margin>
+                  </Button>
+               </children>
+            </FlowPane>
+         </bottom>
+         <BorderPane.margin>
+            <Insets top="15.0" />
+         </BorderPane.margin>
+      </BorderPane>
+   </center>
+</BorderPane>

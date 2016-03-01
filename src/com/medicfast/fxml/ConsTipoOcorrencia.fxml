@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="650.0" minWidth="1366.0" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/Botao.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.medicfast.controller.ConsTipoOcorrenciaController">
+   <top>
+      <FlowPane alignment="CENTER" maxHeight="87.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #4169e1;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Consulta de Tipo de Ocorrência" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="36.0" />
+               </font>
+            </Text>
+         </children>
+      </FlowPane>
+   </top>
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="table" editable="true" layoutX="245.0" layoutY="139.0" prefHeight="310.0" prefWidth="844.0" tableMenuButtonVisible="true">
+              <columns>
+                <TableColumn fx:id="colId" prefWidth="75.0" text="Id" />
+                <TableColumn fx:id="colNome" prefWidth="768.0" text="Nome" />
+              </columns>
+            </TableView>
+            <TextField fx:id="txtNome" layoutX="245.0" layoutY="93.0" prefHeight="25.0" prefWidth="752.0" promptText="Digite o nome da especialidade..." />
+            <Button fx:id="btnPesquisar" layoutX="1020.0" layoutY="93.0" mnemonicParsing="false" onAction="#pesquisar" prefHeight="25.0" prefWidth="69.0" text="Pesquisar" />
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <FlowPane maxHeight="70.0" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnNovo" mnemonicParsing="false" onAction="#novo" text="Novo">
+               <FlowPane.margin>
+                  <Insets left="1100.0" />
+               </FlowPane.margin>
+            </Button>
+            <Button fx:id="btnEditar" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#editar" text="Editar">
+               <FlowPane.margin>
+                  <Insets left="20.0" />
+               </FlowPane.margin>
+            </Button>
+            <Button fx:id="btnExcluir" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#excluir" text="Excluir">
+               <FlowPane.margin>
+                  <Insets left="20.0" />
+               </FlowPane.margin>
+            </Button>
+         </children>
+      </FlowPane>
+   </bottom>
+</BorderPane>
